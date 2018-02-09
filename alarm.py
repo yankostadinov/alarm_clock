@@ -19,8 +19,6 @@ DEFAULT_URLS = ['https://youtu.be/TEDiegpFsQM',
 URL_REGEX = re.compile(r"^(https?\:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$")
 # Regex to check if the time enter is in valid format
 TIME_REGEX = re.compile(r"^\s*([0-2]?\d):?([1-5]\d)?\s*(am|pm)?s*", re.IGNORECASE)
-# Regex to check if the time entered uses AM/PM format
-USES_AMPM_REGEX = re.compile(r"^.*(am|pm)\s*$", re.IGNORECASE)
 
 
 def open_urls(filename="videos.txt"):
