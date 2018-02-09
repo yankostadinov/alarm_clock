@@ -20,7 +20,6 @@ URL_REGEX = re.compile(r"^(https?\:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$"
 # Regex to check if the time enter is in valid format
 TIME_REGEX = re.compile(r"^\s*([0-2]?\d):?([1-5]\d)?\s*(am|pm)?s*", re.IGNORECASE)
 
-
 def open_urls(filename="videos.txt"):
     '''Tries opening a file with name "filename" (default "videos.txt") in the current working directory - if file doesn't exist, creates it.
     Then extracts all the valid YouTube URLs from the file and returns them in a list.'''
@@ -57,6 +56,7 @@ def get_time():
             if "quit" in user_input.lower():
                 raise KeyboardInterrupt
             print("You must use one of these time formats:\n20:50\n11:34am\n3pm")
+            print("\nWhen should the alarm ring? (Type \"quit\" to stop the program)")
             user_input = input()
 
         valid_time = TIME_REGEX.match(user_input)
